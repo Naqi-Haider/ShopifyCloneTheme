@@ -1,0 +1,2 @@
+[environments.development]
+store = "https://clonedev-2.myshopify.com/"
