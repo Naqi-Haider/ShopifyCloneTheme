@@ -462,6 +462,11 @@ p:empty {
   height: 100%;
 }
 
+/* Icon Logo CSS */
+.my-logo{
+  width: 200px;
+}
+
 /* Utility */
 
 .hidden {
