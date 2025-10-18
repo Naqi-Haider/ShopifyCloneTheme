@@ -14,31 +14,35 @@
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
       "blocks": {
-        "announcement_BxgCk9": {
-          "type": "_announcement",
+        "announcement_dEhLh6": {
+          "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "link": "",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none"
-          },
-          "blocks": {}
+            "text": "<p>Free Shipping On All Orders Above 80$</p>"
+          }
+        },
+        "announcement_chnLGm": {
+          "type": "announcement",
+          "settings": {
+            "text": "<p>NEW: The Eyeshadow Stick, Try it Exclusively in The Limited Edition <span style=\"text-decoration:underline\">Bobbi Kit 5.0</span></p>"
+          }
+        },
+        "announcement_mdRgp7": {
+          "type": "announcement",
+          "settings": {
+            "text": "<p>NEW: <span style=\"text-decoration:underline\">The Classic Lip</span> - elevated, modern, and effortless color</p>"
+          }
         }
       },
       "block_order": [
-        "announcement_BxgCk9"
+        "announcement_dEhLh6",
+        "announcement_chnLGm",
+        "announcement_mdRgp7"
       ],
       "name": "t:names.announcement_bar",
       "settings": {
-        "speed": 5,
-        "section_width": "page-width",
-        "color_scheme": "scheme-1",
-        "divider_width": 1,
-        "padding-block-start": 15,
-        "padding-block-end": 15
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "delay": 5
       }
     },
     "header_section": {
