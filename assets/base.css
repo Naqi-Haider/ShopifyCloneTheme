@@ -4321,3 +4321,75 @@ text-component {
 .product-card:hover .product-card__media.product-card__media--secondary {
   opacity: 1;
 }
+/* --- Custom Collection Card Button Style --- */
+
+.collection-card__content {
+  position: relative;
+  z-index: 2;
+  padding: 0;
+  height: 100%;
+  display: block; /* Ensure it's not flexing content vertically */
+}
+
+.collection-card--image-bg .collection-card__content {
+   padding: 0;
+}
+
+/* Style and position the button */
+.collection-card__button-override.button {
+  /* Positioning */
+  position: absolute;
+  bottom: 1rem; /* Adjust as needed */
+  right: 1em;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  z-index: 3;
+  width: max-content;
+  min-width: 120px;
+  padding: 0.8em 1.5em;
+  border-radius: 2px;
+  text-align: center; /* Ensure text is centered */
+
+  /* == Default State (White Background) == */
+  background-color: #FFFFFF !important; /* Force White */
+  color: #000000 !important; /* Force Black */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  /* Transition */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* == Hover State (Transparent Background) == */
+.collection-card__button-override.button:hover {
+  background-color: transparent !important; /* Force Transparent */
+  color: #FFFFFF !important; /* Force White */
+  border-color: #FFFFFF; /* White border on hover */
+}
+
+/* Hide the original text block/overlay */
+.collection-card .text {
+    display: none !important;
+}
+.collection-card__overlay {
+   display: none;
+}
+
+/* --- Custom Hero Button Hover Style --- */
+
+/* Target the button specifically within the hero section's content wrapper */
+.hero__content-wrapper .button {
+  /* Define the properties that will transition */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
+
+  /* Explicitly define default state colors (adjust if your default is different) */
+  background-color: #000000 !important; /* Assuming default button is black */
+  color: #FFFFFF !important; /* Assuming default text is white */
+  border-color: #000000 !important; /* Assuming default border is black */
+}
+
+/* Define the hover state */
+.hero__content-wrapper .button:hover {
+  background-color: transparent !important; /* Force fully transparent */
+  color: #000000 !important; /* Force black text */
+  border-color: #000000 !important; /* Force black border */
+}

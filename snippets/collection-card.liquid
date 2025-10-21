@@ -49,18 +49,25 @@
   "
   {{- block.shopify_attributes -}}
 >
-  <a
+  {% comment %} <a
     class="collection-card__link"
     {% unless onboarding %}
       href="{{ collection.url }}"
     {% endunless %}
   >
     <span class="visually-hidden">{{ collection.title }}</span>
-  </a>
+  </a> {% endcomment %}
   <div class="collection-card__inner">
     {{ card_image }}
     <div class="collection-card__content layout-panel-flex--column">
-      {{ children }}
+      {%- comment -%} Directly render the button if a collection exists {%- endcomment -%}
+      {%- if collection != blank and onboarding == false -%}
+        <a href="{{ collection.url }}" class="button collection-card__button-override">
+          {{ 'Shop ' | append: collection.title | escape }}
+        </a>
+      {%- else -%}
+        {{ children }} {%- comment -%} Fallback for onboarding or if no collection {%- endcomment -%}
+      {%- endif -%}
     </div>
   </div>
 </div>
