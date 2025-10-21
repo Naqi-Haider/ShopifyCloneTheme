@@ -11,23 +11,41 @@
 {%- if should_render -%}
   <style>
     .header-announcements {
-      overflow: hidden;
       position: relative;
+      overflow: hidden;
       padding-top: 10px;
       padding-bottom: 10px;
+      /* Set height to fit one line of text */
+      height: 3.5em; 
     }
-    .header-announcements__container {
-      display: flex;
-      transition: transform 0.6s ease-in-out;
-    }
+    
     .header-announcements__slide {
-      min-width: 100%;
-      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      
+      /* Animation properties */
+      opacity: 0;
+      transform: translateY(100%);
+      transition: all 0.6s ease-in-out;
     }
+
+    .header-announcements__slide.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .header-announcements__slide.is-exiting {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+
     .header-announcements__slide p {
       margin: 0;
     }
@@ -50,12 +68,12 @@
   </div>
 
   <script>
-    class AnnouncementSlider {
+    class VerticalAnnouncementSlider {
       constructor(element) {
         this.bar = element;
-        this.container = this.bar.querySelector('.header-announcements__container');
-        this.slides = this.container.querySelectorAll('.header-announcements__slide');
+        this.slides = this.bar.querySelectorAll('.header-announcements__slide');
         this.delay = parseInt(this.bar.dataset.delay, 10) * 1000;
+        this.transitionTime = 600; // Must match CSS transition time in ms
         this.currentIndex = 0;
 
         if (this.slides.length > 1) {
@@ -64,25 +82,53 @@
       }
 
       init() {
+        // Show the first slide immediately
+        if (this.slides.length > 0) {
+          this.slides[0].classList.add('is-active');
+        }
+
+        // Start the slider loop
         setInterval(() => {
-          this.currentIndex = (this.currentIndex + 1) % this.slides.length;
-          this.container.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+          this.nextSlide();
         }, this.delay);
+      }
+      
+      nextSlide() {
+        const currentSlide = this.slides[this.currentIndex];
+        const nextIndex = (this.currentIndex + 1) % this.slides.length;
+        const nextSlide = this.slides[nextIndex];
+
+        // Animate out the current slide
+        currentSlide.classList.add('is-exiting');
+
+        // Animate in the next slide
+        nextSlide.classList.add('is-active');
+
+        // After the animation finishes, clean up the classes
+        setTimeout(() => {
+          currentSlide.classList.remove('is-active', 'is-exiting');
+        }, this.transitionTime);
+
+        // Update the current index
+        this.currentIndex = nextIndex;
       }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
       const sliderElement = document.getElementById('announcement-slider-{{ section.id }}');
       if (sliderElement) {
-        new AnnouncementSlider(sliderElement);
+        new VerticalAnnouncementSlider(sliderElement);
       }
     });
 
+    // Re-initialize slider on theme editor changes
     document.addEventListener('shopify:section:load', (event) => {
+      if (event.detail.sectionId === '{{ section.id }}') {
         const sliderElement = document.getElementById('announcement-slider-{{ section.id }}');
         if (sliderElement) {
-            new AnnouncementSlider(sliderElement);
+          new VerticalAnnouncementSlider(sliderElement);
         }
+      }
     });
   </script>
 {%- endif -%}
