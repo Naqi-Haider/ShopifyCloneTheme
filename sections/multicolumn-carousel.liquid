@@ -1,0 +1,48 @@
+{% schema %}
+{
+  "name": "Multicolumn Carousel",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "carousel_toggle",
+      "label": "Enable Carousel"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multicolumn Carousel",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="splide" id="multicolumn-carousel">
+  <div class="splide__track">
+    <ul class="splide__list">
+      {% for item in section.settings.items %}
+        <li class="splide__slide">
+          <h2>{{ item.title }}</h2>
+          <p>{{ item.content }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% if section.settings.carousel_toggle %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#multicolumn-carousel', {
+        type       : 'loop',
+        perPage    : 1,
+        perMove    : 1,
+        breakpoints: {
+          600: {
+            perPage: 1,
+          },
+        },
+      }).mount();
+    });
+  </script>
+{% endif %}
