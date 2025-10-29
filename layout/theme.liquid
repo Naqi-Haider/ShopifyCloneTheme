@@ -27,6 +27,12 @@
     {%- render 'theme-styles-variables' -%}
     {%- render 'color-schemes' -%}
 
+    {% comment %} Column Carousel Styles {% endcomment %}
+    {{ 'column-carousel.css' | asset_url | stylesheet_tag }}
+
+    {% comment %} Get the Look Styles {% endcomment %}
+    {{ 'get-the-looks.css' | asset_url | stylesheet_tag }}
+
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
     {% endif %}
@@ -65,5 +71,8 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+
+    {% comment %} Column Carousel Script {% endcomment %}
+    <script src="{{ 'column-carousel.js' | asset_url }}" defer></script>
   </body>
 </html>

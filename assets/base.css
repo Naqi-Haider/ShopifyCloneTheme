@@ -4393,3 +4393,20 @@ text-component {
   color: #000000 !important; /* Force black text */
   border-color: #000000 !important; /* Force black border */
 }
+
+/* Carousel Settings Mobile view */
+@media only screen and (max-width: 989px){
+.background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+.multicolumn-card__info .rte {
+    font-size: 1.3rem;
+}
+.multicolumn-card__info h3 {
+    font-size: 1.5rem;
+}
+.section-template--19921507778828__multicolumn_ggPawF-padding .multicolumn-card__image-wrapper--third-width {
+    max-width: 38px !important;
+}
+}

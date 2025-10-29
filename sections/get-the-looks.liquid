@@ -1,0 +1,106 @@
+<section class="get-the-look" style="background: {{ section.settings.background_color }};">
+  <div class="get-the-look__header">
+    {% if section.settings.title != blank %}
+      <h2 class="get-the-look__title">{{ section.settings.title }}</h2>
+    {% endif %}
+  </div>
+
+  <div class="get-the-look__grid">
+    {% for block in section.blocks %}
+      <div class="get-the-look__item">
+        <div class="get-the-look__image">
+          {% if block.settings.image %}
+            {{ block.settings.image | image_url: width: 600 | image_tag:
+              loading: 'lazy',
+              width: 600,
+              height: 600,
+              class: 'get-the-look__image-img'
+            }}
+          {% endif %}
+        </div>
+        <div class="get-the-look__overlay">
+          <div class="get-the-look__content">
+            {% if block.settings.look_name != blank %}
+              <h3 class="get-the-look__look-name">{{ block.settings.look_name }}</h3>
+            {% endif %}
+            
+            {% if block.settings.link_url != blank %}
+              <a class="get-the-look__button" href="{{ block.settings.link_url }}">
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Get the Look",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "GET THE LOOK"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "look",
+      "name": "Look",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "look_name",
+          "label": "Look Name",
+          "default": "Look Name"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "GET THE LOOK"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Get the Look",
+      "blocks": [
+        {
+          "type": "look"
+        },
+        {
+          "type": "look"
+        },
+        {
+          "type": "look"
+        },
+        {
+          "type": "look"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
