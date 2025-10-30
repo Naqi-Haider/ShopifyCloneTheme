@@ -1256,528 +1256,128 @@
         "padding-block-end": 60
       }
     },
-    "multicolumn_carousel_rHJKQc": {
-      "type": "multicolumn-carousel",
+    "column_carousel_TPHCV7": {
+      "type": "column-carousel",
       "blocks": {
-        "group_dxz4Gp": {
-          "type": "group",
-          "name": "Column",
+        "column_JUQfMc": {
+          "type": "column",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 8,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 10,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "image_9TRDBB": {
-              "type": "image",
-              "name": "t:names.image",
-              "settings": {
-                "link": "",
-                "image_ratio": "adapt",
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_UPdPbW": {
-              "type": "text",
-              "name": "Heading",
-              "settings": {
-                "text": "<h2>Better Beauty</h2>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_WfYzYH": {
-              "type": "text",
-              "name": "Description",
-              "settings": {
-                "text": "<p>The world doesn't need more beauty products. It needs better beauty products.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image_9TRDBB",
-            "text_UPdPbW",
-            "text_WfYzYH"
-          ]
+            "image": "shopify://shop_images/PRODUCT-ROW-PDP-01_230x_40f559f9-950f-416a-a1ea-4f0460fdbb9a.jpg",
+            "heading": "Better Beauty",
+            "description": "<p>The world doesn't need more beauty products. It needs better beauty products.<br/></p>",
+            "link_url": "shopify://pages/contact",
+            "link_text": "Learn More"
+          }
         },
-        "group_L8gbBd": {
-          "type": "group",
-          "name": "Column",
+        "column_wkmWTX": {
+          "type": "column",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 8,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 10,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "image_HVEQPd": {
-              "type": "image",
-              "name": "t:names.image",
-              "settings": {
-                "link": "",
-                "image_ratio": "adapt",
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_tjiH4p": {
-              "type": "text",
-              "name": "Heading",
-              "settings": {
-                "text": "<h2>Clean Slate</h2>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_UCpNt8": {
-              "type": "text",
-              "name": "Description",
-              "settings": {
-                "text": "<p>No phthalates, sulfates, petrolatum, PEGs, EDTA, or BPA. Because clean beauty is a no brainer.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image_HVEQPd",
-            "text_tjiH4p",
-            "text_UCpNt8"
-          ]
+            "image": "shopify://shop_images/PRODUCT-ROW-PDP-02_230x_058b978b-be1e-46a0-98ed-be7f5132cb78.jpg",
+            "heading": "Clean Slate",
+            "description": "<p>No phthalates, sulfates, petrolatum, PEGs, EDTA, or BPA. Because clean beauty is a no brainer.</p>",
+            "link_url": "shopify://pages/contact",
+            "link_text": "Learn More"
+          }
         },
-        "group_LKAU3K": {
-          "type": "group",
-          "name": "Column",
+        "column_tQMXbP": {
+          "type": "column",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 8,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 10,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "image_rJBMca": {
-              "type": "image",
-              "name": "t:names.image",
-              "settings": {
-                "link": "",
-                "image_ratio": "adapt",
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_WKErPT": {
-              "type": "text",
-              "name": "Heading",
-              "settings": {
-                "text": "<h2>High Performance</h2>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_DdAVdh": {
-              "type": "text",
-              "name": "Description",
-              "settings": {
-                "text": "<p>The makeup equivalent of a swiss army knife. Easy, cool, multi-purpose products.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image_rJBMca",
-            "text_WKErPT",
-            "text_DdAVdh"
-          ]
+            "image": "shopify://shop_images/value-props-1_460x_b999094c-1603-4ba3-b3a4-9c681c96aeb1.png",
+            "heading": "High Performance",
+            "description": "<p>The makeup equivalent of a swiss army knife. Easy, cool, multi-purpose products.</p>",
+            "link_url": "shopify://pages/contact",
+            "link_text": "Learn More"
+          }
         },
-        "group_zykRar": {
-          "type": "group",
-          "name": "Column",
+        "column_3B3BzM": {
+          "type": "column",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 8,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 10,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "image_R7FKRL": {
-              "type": "image",
-              "name": "t:names.image",
-              "settings": {
-                "link": "",
-                "image_ratio": "adapt",
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_Vm8rQr": {
-              "type": "text",
-              "name": "Heading",
-              "settings": {
-                "text": "<h2>From Bobbi</h2>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_n6rY6f": {
-              "type": "text",
-              "name": "Description",
-              "settings": {
-                "text": "<p>It began with the need to create formulas for her own kit.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "image_R7FKRL",
-            "text_Vm8rQr",
-            "text_n6rY6f"
-          ]
+            "image": "shopify://shop_images/PRODUCT-ROW-PDP-04_460x_875f476a-c5fb-4d2c-8666-65a3ef832c4a.jpg",
+            "heading": "From BOBBI",
+            "description": "<p>It began with the need to create formulas for her own kit.</p>",
+            "link_url": "shopify://pages/contact",
+            "link_text": "Learn More"
+          }
         }
       },
       "block_order": [
-        "group_dxz4Gp",
-        "group_L8gbBd",
-        "group_LKAU3K",
-        "group_zykRar"
+        "column_JUQfMc",
+        "column_wkmWTX",
+        "column_tQMXbP",
+        "column_3B3BzM"
       ],
-      "name": "t:names.multicolumn",
+      "name": "Column Carousel",
       "settings": {
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "carousel_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "flex-start",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "full_width": true,
+        "background_color": "#f8f8f8",
+        "text_color": "#000000",
+        "heading_size": 21,
+        "heading_weight": "700",
+        "description_size": 14,
+        "description_weight": "400",
+        "cta_size": 14,
+        "cta_weight": "400"
+      }
+    },
+    "get_the_looks_97q7yz": {
+      "type": "get-the-looks",
+      "blocks": {
+        "card_gKnWH6": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/JonesRoad_Eyeshadow_SmokeyGrey_04_Olesia_GTL_x1000_90977f2a-d391-47fb-98ac-563dfa6daeb3.jpg",
+            "heading": "Olesia’s Chic, Effortless Look",
+            "link_url": "",
+            "button_text": "Get the look"
+          }
+        },
+        "card_jNNeap": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Deja_x1000_575537ad-7bee-40f4-8847-afcbb9565228.jpg",
+            "heading": "Deja's Simple Smokey Eye",
+            "link_url": "",
+            "button_text": "GET THE LOOK"
+          }
+        },
+        "card_BRadgN": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/JonesRoad_GetTheLook_Mollye_GTL_x1000_5af5f63f-a39b-4bb5-8cfc-8f46b6a3796e.jpg",
+            "heading": "Mollye's Monochromatic Look",
+            "link_url": "",
+            "button_text": "GET THE LOOK"
+          }
+        },
+        "card_LrEDgA": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/justbobbi_AdelinaSoftFocusSparkle_x1000_1b6cde65-e156-4b7c-bb57-8e7cc00398f4.jpg",
+            "heading": "Adelina’s Soft Sophistication",
+            "link_url": "",
+            "button_text": "GET THE LOOK"
+          }
+        }
+      },
+      "block_order": [
+        "card_gKnWH6",
+        "card_jNNeap",
+        "card_BRadgN",
+        "card_LrEDgA"
+      ],
+      "name": "Get the Look",
+      "settings": {
+        "title": "GET THE LOOK",
+        "section_title_size": 32,
+        "section_title_weight": "700",
+        "full_width": true,
+        "background_color": "#ffffff",
+        "card_title_size": 24,
+        "card_title_weight": "400",
+        "card_title_line_height": 1.2,
+        "card_title_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "button_bg_color": "#000000cf"
       }
     }
   },
@@ -1789,6 +1389,7 @@
     "section_fpMtEh",
     "hero_DEqbYg",
     "section_WNwMzQ",
-    "multicolumn_carousel_rHJKQc"
+    "column_carousel_TPHCV7",
+    "get_the_looks_97q7yz"
   ]
 }
