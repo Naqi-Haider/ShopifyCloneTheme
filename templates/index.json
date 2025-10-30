@@ -303,7 +303,7 @@
         "rows_gap": 24,
         "icons_style": "arrow",
         "icons_shape": "none",
-        "section_width": "full-width",
+        "section_width": "page-width",
         "horizontal_alignment": "center",
         "gap": 28,
         "color_scheme": "scheme-1",
@@ -493,7 +493,7 @@
             "alignment": "center",
             "type_preset": "custom",
             "font": "var(--font-heading--family)",
-            "font_size": "2.5rem",
+            "font_size": "2rem",
             "line_height": "normal",
             "letter_spacing": "tight",
             "case": "none",
@@ -1328,7 +1328,7 @@
             "image": "shopify://shop_images/JonesRoad_Eyeshadow_SmokeyGrey_04_Olesia_GTL_x1000_90977f2a-d391-47fb-98ac-563dfa6daeb3.jpg",
             "heading_line1": "Olesia's Chic,",
             "heading_line2": "Effortless Look",
-            "heading_line3": "..",
+            "heading_line3": "",
             "button_text": "GET THE LOOK",
             "button_link": "shopify://collections/shop-eyes"
           }
@@ -1348,9 +1348,9 @@
           "type": "button",
           "settings": {
             "image": "shopify://shop_images/JonesRoad_GetTheLook_Mollye_GTL_x1000_5af5f63f-a39b-4bb5-8cfc-8f46b6a3796e.jpg",
-            "heading_line1": "Olesia's Chic,",
-            "heading_line2": "Effortless Look",
-            "heading_line3": "..",
+            "heading_line1": "Mollye's",
+            "heading_line2": "Monochromatic",
+            "heading_line3": "Look",
             "button_text": "GET THE LOOK",
             "button_link": "shopify://collections/shop-face"
           }
@@ -1359,9 +1359,9 @@
           "type": "button",
           "settings": {
             "image": "shopify://shop_images/justbobbi_AdelinaSoftFocusSparkle_x1000_1b6cde65-e156-4b7c-bb57-8e7cc00398f4.jpg",
-            "heading_line1": "Olesia's Chic,",
-            "heading_line2": "Effortless Look",
-            "heading_line3": "..",
+            "heading_line1": "Adelina’s Soft",
+            "heading_line2": "Sophistication",
+            "heading_line3": "",
             "button_text": "GET THE LOOK",
             "button_link": "shopify://collections/shop-eyes"
           }

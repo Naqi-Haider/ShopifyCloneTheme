@@ -4389,7 +4389,7 @@ text-component {
 
 /* Define the hover state */
 .hero__content-wrapper .button:hover {
-  background-color: transparent !important; /* Force fully transparent */
+  background-color: white !important; /* Force white background */
   color: #000000 !important; /* Force black text */
   border-color: #000000 !important; /* Force black border */
 }
