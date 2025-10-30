@@ -1322,48 +1322,56 @@
     "get_the_looks_97q7yz": {
       "type": "get-the-looks",
       "blocks": {
-        "card_gKnWH6": {
-          "type": "card",
+        "button_KQzi93": {
+          "type": "button",
           "settings": {
             "image": "shopify://shop_images/JonesRoad_Eyeshadow_SmokeyGrey_04_Olesia_GTL_x1000_90977f2a-d391-47fb-98ac-563dfa6daeb3.jpg",
-            "heading": "Olesia’s Chic, Effortless Look",
-            "link_url": "",
-            "button_text": "Get the look"
+            "heading_line1": "Olesia's Chic,",
+            "heading_line2": "Effortless Look",
+            "heading_line3": "..",
+            "button_text": "GET THE LOOK",
+            "button_link": "shopify://collections/shop-eyes"
           }
         },
-        "card_jNNeap": {
-          "type": "card",
+        "button_7QUTad": {
+          "type": "button",
           "settings": {
             "image": "shopify://shop_images/Deja_x1000_575537ad-7bee-40f4-8847-afcbb9565228.jpg",
-            "heading": "Deja's Simple Smokey Eye",
-            "link_url": "",
-            "button_text": "GET THE LOOK"
+            "heading_line1": "Deja's Simple",
+            "heading_line2": "Smokey Eye",
+            "heading_line3": "",
+            "button_text": "GET THE LOOK",
+            "button_link": "shopify://collections/shop-eyes"
           }
         },
-        "card_BRadgN": {
-          "type": "card",
+        "button_UkLYWG": {
+          "type": "button",
           "settings": {
             "image": "shopify://shop_images/JonesRoad_GetTheLook_Mollye_GTL_x1000_5af5f63f-a39b-4bb5-8cfc-8f46b6a3796e.jpg",
-            "heading": "Mollye's Monochromatic Look",
-            "link_url": "",
-            "button_text": "GET THE LOOK"
+            "heading_line1": "Olesia's Chic,",
+            "heading_line2": "Effortless Look",
+            "heading_line3": "..",
+            "button_text": "GET THE LOOK",
+            "button_link": "shopify://collections/shop-face"
           }
         },
-        "card_LrEDgA": {
-          "type": "card",
+        "button_VDPLHH": {
+          "type": "button",
           "settings": {
             "image": "shopify://shop_images/justbobbi_AdelinaSoftFocusSparkle_x1000_1b6cde65-e156-4b7c-bb57-8e7cc00398f4.jpg",
-            "heading": "Adelina’s Soft Sophistication",
-            "link_url": "",
-            "button_text": "GET THE LOOK"
+            "heading_line1": "Olesia's Chic,",
+            "heading_line2": "Effortless Look",
+            "heading_line3": "..",
+            "button_text": "GET THE LOOK",
+            "button_link": "shopify://collections/shop-eyes"
           }
         }
       },
       "block_order": [
-        "card_gKnWH6",
-        "card_jNNeap",
-        "card_BRadgN",
-        "card_LrEDgA"
+        "button_KQzi93",
+        "button_7QUTad",
+        "button_UkLYWG",
+        "button_VDPLHH"
       ],
       "name": "Get the Look",
       "settings": {
@@ -1375,9 +1383,7 @@
         "card_title_size": 24,
         "card_title_weight": "400",
         "card_title_line_height": 1.2,
-        "card_title_color": "#ffffff",
-        "button_text_color": "#ffffff",
-        "button_bg_color": "#000000cf"
+        "card_title_color": "#ffffff"
       }
     }
   },

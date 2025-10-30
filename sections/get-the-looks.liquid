@@ -39,6 +39,9 @@
                       {% if block.settings.heading_line2 != blank %}
                         <span class="cards-carousel__card-heading-line2">{{ block.settings.heading_line2 }}</span>
                       {% endif %}
+                      {% if block.settings.heading_line3 != blank %}
+                        <span class="cards-carousel__card-heading-line3">{{ block.settings.heading_line3 }}</span>
+                      {% endif %}
                     </h3>
                   </div>
                 {% endif %}
@@ -66,9 +69,6 @@
                       {% endif %}
                       {% if block.settings.heading_line2 != blank %}
                         <span class="cards-carousel__card-heading-line2">{{ block.settings.heading_line2 }}</span>
-                      {% endif %}
-                      {% if block.settings.heading_line3 != blank %}
-                        <span class="cards-carousel__card-heading-line3">{{ block.settings.heading_line3 }}</span>
                       {% endif %}
                     </h3>
                   </div>
@@ -265,6 +265,7 @@
           "type": "text",
           "id": "heading_line3",
           "label": "Card Title - Line 3",
+          "default": ".."
         },
         {
           "type": "text",
