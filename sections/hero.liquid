@@ -1,5 +1,3 @@
-
-
 {% liquid
   assign media_count = 0
   if section.settings.image_1 != blank and section.settings.image_2 != blank
@@ -8,8 +6,8 @@
     assign media_width_desktop = '100vw'
   endif
   assign media_width_mobile = '100vw'
-  assign sizes = '(min-width: 750px) ' | append: media_width_desktop | append: ', ' | append: media_width_mobile
-  assign widths = '832, 1200, 1600, 1920, 2560, 3840'
+  assign sizes = '100vw'
+  assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
 
   assign has_image_1 = false
   assign has_image_2 = false
@@ -203,13 +201,7 @@
     --hero-border-width: {{ section.settings.border_width }}px;
     --hero-border-opacity: {{ section.settings.border_opacity }}%;
     --blur-opacity: {{ section.settings.reflection_opacity | divided_by: 100.0 }};
-    {% if section.settings.section_height == 'custom' %}
-      --hero-min-height: {{ section.settings.section_height_custom }}svh;
-    {% elsif section.settings.section_height == "full-screen" %}
-       --hero-min-height: 100svh;
-    {% else %}
-      --hero-min-height: var(--section-height-{{ section.settings.section_height }});
-    {% endif %}
+    --hero-min-height: 100svh;
   "
   {% if request.visual_preview_mode %}
     data-shopify-visual-preview
@@ -226,14 +218,9 @@
     {% endunless %}
   {% endif %}
 
-  {% comment %}
-    Hardcoded to section--full-width bc the media has to be full width in all cases.
-    hero__content-wrapper applies section_width.
-  {% endcomment %}
-
   <div
     class="hero__container spacing-style section section--full-width"
-    style="      {% render 'spacing-style', settings: section.settings %}"
+    style="{% render 'spacing-style', settings: section.settings %}"
   >
     {%- if section.settings.link != blank -%}
       <a
@@ -246,7 +233,7 @@
     {%- endif -%}
     <div
       class="hero__media-wrapper"
-      style="--hero-media-count: {{ media_count }};{%- if section.settings.image_1 != blank -%} --hero-media-aspect-ratio: {{ section.settings.image_1.aspect_ratio }};{% endif %}"
+      style="--hero-media-count: {{ media_count }};"
     >
       {% liquid
         if section.settings.toggle_overlay
@@ -277,7 +264,6 @@
     --hero-height-offset: 0px;
   }
 
-  /* Being extra specific in the selector for performance reasons */
   body:has(> #header-group > .header-section > #header-component) .hero-wrapper:first-child {
     --hero-height-offset: var(--header-group-height, 0);
   }
@@ -285,11 +271,12 @@
   .hero {
     position: relative;
     min-height: calc(var(--hero-min-height) - var(--hero-height-offset));
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
   }
 
   .hero[data-shopify-visual-preview] {
     --hero-min-height: 600px;
-
     min-height: 600px;
   }
 
@@ -298,6 +285,8 @@
     overflow: hidden;
     border: var(--hero-border-width) var(--hero-border-style) rgb(var(--color-border-rgb) / var(--hero-border-opacity));
     min-height: inherit;
+    width: 100%;
+    max-width: none !important;
     align-items: var(--vertical-alignment-mobile);
     justify-content: var(--horizontal-alignment);
     z-index: var(--layer-base);
@@ -327,43 +316,61 @@
     display: grid;
     grid-column: 1 / -1;
     grid-template-columns: repeat(var(--hero-media-count, 1), 1fr);
-  }
-
-  .hero--auto .hero__image,
-  .hero--auto .hero__video {
-    aspect-ratio: var(--hero-media-aspect-ratio);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .hero--no-blocks-auto-height {
     :is(.hero__image, .hero__video) {
       width: 100%;
-      aspect-ratio: auto;
+      aspect-ratio: auto !important;
     }
 
     .hero__media-wrapper {
-      /* When there are no blocks and the height is auto, allow the image to appear. */
       position: relative;
     }
   }
 
+  /* AGGRESSIVE IMAGE SIZING - Makes image truly full width and height */
   .hero__image,
   .hero__video,
   .hero__video-poster {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center center;
-    overflow: hidden;
-    position: relative;
+    position: absolute !important;
+    inset: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    overflow: hidden !important;
     z-index: var(--layer-base);
+    aspect-ratio: unset !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    display: block !important;
   }
 
   .hero__video-wrapper {
-    position: relative;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .hero__video-poster {
-    position: absolute;
+    position: absolute !important;
   }
 
   .hero__link {
@@ -438,7 +445,6 @@
     }
   }
 {% endstylesheet %}
-
 {% schema %}
 {
   "name": "t:names.hero",

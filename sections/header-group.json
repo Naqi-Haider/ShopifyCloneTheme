@@ -65,7 +65,7 @@
           "static": true,
           "settings": {
             "menu": "main-menu",
-            "color_scheme": "",
+            "color_scheme": "scheme-1",
             "type_font_primary_size": "0.875rem",
             "menu_font_style": "inverse",
             "type_font_primary_link": "body",
@@ -84,8 +84,8 @@
         }
       },
       "settings": {
-        "logo_position": "left",
-        "menu_position": "center",
+        "logo_position": "center",
+        "menu_position": "left",
         "menu_row": "top",
         "show_search": true,
         "search_position": "right",
@@ -113,10 +113,206 @@
         "enable_transparent_header_collection": false,
         "collection_color_scheme": "default"
       }
+    },
+    "divider_rWL7hV": {
+      "type": "divider",
+      "name": "t:names.divider_section",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "full-width",
+        "thickness": 1,
+        "corner_radius": "square",
+        "width_percent": 100,
+        "alignment_horizontal": "center",
+        "padding-block-start": 16,
+        "padding-block-end": 5
+      }
+    },
+    "mega_menu_9nCFdL": {
+      "type": "mega-menu",
+      "blocks": {
+        "menu_item_7bjkBh": {
+          "type": "menu_item",
+          "settings": {
+            "link_text": "Shop All",
+            "link_url": "https://www.jonesroadbeauty.com/collections/shop-all",
+            "show_dropdown": true,
+            "feature_1_image": "shopify://shop_images/Andressa-navtest_1.png",
+            "feature_1_heading": "FIND YOUR SHADES",
+            "feature_1_text": "Our quick & easy quizzes will match you with the right shades.",
+            "feature_1_url": "https://www.jonesroadbeauty.com/pages/quiz-landing",
+            "feature_2_image": "shopify://shop_images/MECCA_SET1_081225_647_edit_2_8.png",
+            "feature_2_heading": "Bobbi's Favorites, All in One Kit",
+            "feature_2_text": "Get five exclusives for eyes, lips, & face only in The Bobbi Kit 5.0.",
+            "feature_2_url": "https://www.jonesroadbeauty.com/products/the-bobbi-kit-5-0",
+            "featured_products": [
+              "miracle-balm",
+              "the-bobbi-kit-5-0",
+              "the-classic-lip",
+              "the-complexion-set",
+              "what-the-foundation"
+            ],
+            "quick_links": "shop-all-menu"
+          }
+        },
+        "menu_item_XGUh3k": {
+          "type": "menu_item",
+          "settings": {
+            "link_text": "Face",
+            "link_url": "https://www.jonesroadbeauty.com/collections/face",
+            "show_dropdown": true,
+            "feature_1_image": "shopify://shop_images/JETM_cinnamon_2_1.png",
+            "feature_1_heading": "Your Perfect Shade",
+            "feature_1_text": "Take our quizzes to find the ideal shades for you. or promotion.",
+            "feature_1_url": "https://www.jonesroadbeauty.com/pages/quiz-landing",
+            "feature_2_image": "shopify://shop_images/DREW_SET1_081325_095_edit_1_2.png",
+            "feature_2_heading": "Five Limited-Edition Exclusives",
+            "feature_2_text": "Get Bobbi's current must-haves all in one kit.Describe the feature or promotion.",
+            "feature_2_url": "https://www.jonesroadbeauty.com/products/the-bobbi-kit-5-0",
+            "featured_products": [
+              "just-enough-tinted-moisturizer",
+              "miracle-balm",
+              "what-the-foundation",
+              "the-complexion-set",
+              "the-face-pencil"
+            ],
+            "quick_links": "face-menu"
+          }
+        },
+        "menu_item_McKUNa": {
+          "type": "menu_item",
+          "settings": {
+            "link_text": "Eyes",
+            "link_url": "https://www.jonesroadbeauty.com/collections/eyes",
+            "show_dropdown": true,
+            "feature_1_image": "shopify://shop_images/MECCA_SET1_081225_778_edit_1_1.png",
+            "feature_1_heading": "New, Exclusive Eyeshadow Stick",
+            "feature_1_text": "Rich, modern color in a swipe — only available in the Bobbi Kit 5.0.",
+            "feature_1_url": "https://www.jonesroadbeauty.com/products/the-bobbi-kit-5-0",
+            "feature_2_image": "shopify://shop_images/herokit_hero_0209b99a-d991-467b-b650-f64bb6917d96_1.png",
+            "feature_2_heading": "Award-Winning Mascara",
+            "feature_2_text": "The ultimate clean mascara for definition, volume, and lift.",
+            "feature_2_url": "https://www.jonesroadbeauty.com/products/the-mascara",
+            "featured_products": [
+              "gel-liner",
+              "the-mascara",
+              "the-brow-gel",
+              "the-brow-pencil",
+              "the-best-eyeshadow"
+            ],
+            "quick_links": "eyes-menu"
+          }
+        },
+        "menu_item_xmijHa": {
+          "type": "menu_item",
+          "settings": {
+            "link_text": "Lips",
+            "link_url": "https://www.jonesroadbeauty.com/collections/lips",
+            "show_dropdown": true,
+            "feature_1_image": "shopify://shop_images/IMG_0842_1_2.png",
+            "feature_1_heading": "Exclusive Lip, Limited Time",
+            "feature_1_text": "The Lip in Batch 18 is going fast — get yours in The Bobbi Kit 5.0.Describe the feature or promotion.",
+            "feature_1_url": "https://www.jonesroadbeauty.com/products/the-bobbi-kit-5-0",
+            "feature_2_image": "shopify://shop_images/ABUK_SET1_052925_209_edit_2__2_1.png",
+            "feature_2_heading": "Meet The Classic Lip",
+            "feature_2_text": "The new lipstick reinventing comfortable lip color.Describe the feature or promotion.",
+            "feature_2_url": "https://www.jonesroadbeauty.com/products/the-classic-lip",
+            "featured_products": [
+              "miracle-balm",
+              "the-classic-lip",
+              "the-lip-pencil",
+              "the-lippie-stick",
+              "cool-gloss"
+            ],
+            "quick_links": "lip-menu"
+          }
+        },
+        "menu_item_UaBmXP": {
+          "type": "menu_item",
+          "settings": {
+            "link_text": "Skin",
+            "link_url": "https://www.jonesroadbeauty.com/collections/skin",
+            "show_dropdown": true,
+            "feature_1_image": "shopify://shop_images/travelkits_skincare_3_1_1.png",
+            "feature_1_heading": "Carry-On Approved Skincare",
+            "feature_1_text": "Refreshed skin on-the-go, with The Skincare Travel Kit.Describe the feature or promotion.",
+            "feature_1_url": "https://www.jonesroadbeauty.com/products/the-skincare-travel-kit",
+            "feature_2_image": "shopify://shop_images/ShowerGel_PDP_02_f4de8f30-d2b1-4f8a-940e-c39b32266f94_1.png",
+            "feature_2_heading": "Luxurious Shower Upgrade",
+            "feature_2_text": "Revitalize your body care routine with Shower Gel.Describe the feature or promotion.",
+            "feature_2_url": "https://www.jonesroadbeauty.com/products/shower-gel",
+            "featured_products": [
+              "shower-gel",
+              "multivitamin-serum",
+              "soft-skin-cream-cleanser",
+              "tube-key",
+              "miracle-cream"
+            ],
+            "quick_links": "skin-menu"
+          }
+        },
+        "menu_item_BW8dUJ": {
+          "type": "menu_item",
+          "settings": {
+            "link_text": "Kits",
+            "link_url": "https://www.jonesroadbeauty.com/collections/kits",
+            "show_dropdown": true,
+            "feature_1_image": "shopify://shop_images/fp_shade13_3_1_1.png",
+            "feature_1_heading": "Start by Finding Your Shades",
+            "feature_1_text": "ShadesTake our quizzes to find the right shades for you.",
+            "feature_1_url": "https://www.jonesroadbeauty.com/pages/quiz-landing",
+            "feature_2_image": "shopify://shop_images/MECCA_SET1_081225_740_edit_1_3.png",
+            "feature_2_heading": "The Limited-Edition Bobbi Kit 5.0",
+            "feature_2_text": "Don't miss out on five exclusives before they're gone for good.Describe the feature or promotion.",
+            "feature_2_url": "https://www.jonesroadbeauty.com/products/the-bobbi-kit-5-0",
+            "featured_products": [
+              "the-bobbi-kit-5-0",
+              "the-complexion-set",
+              "the-makeup-travel-kit-2-0",
+              "the-hero-kit",
+              "the-nail-polish-kit"
+            ],
+            "quick_links": "kits-menu"
+          }
+        },
+        "menu_item_J468nt": {
+          "type": "menu_item",
+          "settings": {
+            "link_text": "More",
+            "link_url": "",
+            "show_dropdown": true,
+            "feature_1_image": "shopify://shop_images/CHARLOTTE_SET1_052825_527_edit_1.png",
+            "feature_1_heading": "Confidence, Bottled",
+            "feature_1_text": "Meet BKLYN, the new fragrance pulls any look together.Describe the feature or promotion.",
+            "feature_1_url": "https://www.jonesroadbeauty.com/products/bklyn",
+            "feature_2_image": "shopify://shop_images/Noelle_512_edit_1.png",
+            "feature_2_heading": "Blend & Apply Like a Pro",
+            "feature_2_text": "ProProfessional-grade brushes & tools for every step of your routine.",
+            "feature_2_url": "https://www.jonesroadbeauty.com/collections/tools",
+            "featured_products": [],
+            "quick_links": "more-menu"
+          }
+        }
+      },
+      "block_order": [
+        "menu_item_7bjkBh",
+        "menu_item_XGUh3k",
+        "menu_item_McKUNa",
+        "menu_item_xmijHa",
+        "menu_item_UaBmXP",
+        "menu_item_BW8dUJ",
+        "menu_item_J468nt"
+      ],
+      "name": "Mega Menu",
+      "settings": {
+        "underline_color": "#e7237e"
+      }
     }
   },
   "order": [
     "header_announcements_9jGBFp",
-    "header_section"
+    "header_section",
+    "divider_rWL7hV",
+    "mega_menu_9nCFdL"
   ]
 }

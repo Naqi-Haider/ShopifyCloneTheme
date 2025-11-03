@@ -1,0 +1,348 @@
+<style>
+  /* Main Mega Menu Bar */
+  .mega-menu {
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative; /* Needed for positioning dropdowns */
+  }
+
+  .mega-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mega-menu__item {
+    margin: 0 20px;
+  }
+
+  /* Top-level menu links */
+  .mega-menu__link {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    padding-bottom: 1px; /* Space for the underline */
+  }
+
+  .mega-menu__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: {{ section.settings.underline_color }};
+    display: none;
+  }
+
+  .mega-menu__item:hover .mega-menu__link::after {
+    display: block;
+  }
+
+  /* Dropdown Panel */
+  .mega-menu__dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 40px 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #e5e5e5;
+    z-index: 10;
+  }
+
+  .mega-menu__item:hover .mega-menu__dropdown {
+    display: block;
+  }
+
+  .mega-menu__dropdown-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr; /* 4 columns */
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* Feature Cards */
+  .mega-menu__feature-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .mega-menu__feature-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .mega-menu__feature-card-heading {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+  .mega-menu__feature-card-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Product Links Column */
+  .mega-menu__product-links-heading {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+  }
+  .mega-menu__product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .mega-menu__product-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .mega-menu__product-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    background-color: #f5f5f5;
+  }
+
+  /* Quick Links Column */
+  .mega-menu__quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .mega-menu__quick-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    line-height: 2.2;
+  }
+  .mega-menu__quick-links a:hover {
+    text-decoration: underline;
+  }
+
+</style>
+
+<div class="mega-menu">
+  <ul class="mega-menu__list">
+    {%- for block in section.blocks -%}
+      <li class="mega-menu__item" {{ block.shopify_attributes }}>
+        <a href="{{ block.settings.link_url }}" class="mega-menu__link">
+          {{ block.settings.link_text }}
+        </a>
+
+        {%- if block.settings.show_dropdown -%}
+          <div class="mega-menu__dropdown">
+            <div class="mega-menu__dropdown-grid">
+              
+              <!-- Feature Card 1 -->
+              <div class="mega-menu__feature-card">
+                <a href="{{ block.settings.feature_1_url }}">
+                  {%- if block.settings.feature_1_image != blank -%}
+                    <img src="{{ block.settings.feature_1_image | image_url: width: 400 }}" alt="{{ block.settings.feature_1_image.alt | escape }}">
+                  {%- else -%}
+                     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                  <h3 class="mega-menu__feature-card-heading">{{ block.settings.feature_1_heading }}</h3>
+                  <p class="mega-menu__feature-card-text">{{ block.settings.feature_1_text }}</p>
+                </a>
+              </div>
+
+              <!-- Feature Card 2 -->
+              <div class="mega-menu__feature-card">
+                 <a href="{{ block.settings.feature_2_url }}">
+                  {%- if block.settings.feature_2_image != blank -%}
+                    <img src="{{ block.settings.feature_2_image | image_url: width: 400 }}" alt="{{ block.settings.feature_2_image.alt | escape }}">
+                  {%- else -%}
+                     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                  <h3 class="mega-menu__feature-card-heading">{{ block.settings.feature_2_heading }}</h3>
+                  <p class="mega-menu__feature-card-text">{{ block.settings.feature_2_text }}</p>
+                </a>
+              </div>
+
+              <!-- Product Links -->
+              <div class="mega-menu__product-links">
+                <h3 class="mega-menu__product-links-heading">{{ block.settings.link_text }}</h3>
+                <ul class="mega-menu__product-list">
+                  {% for product in block.settings.featured_products %}
+                    <li class="mega-menu__product-item">
+                      <a href="{{ product.url }}">
+                        {% if product.featured_image != blank %}
+                          <img src="{{ product.featured_image | image_url: width: 60, height: 60 }}" alt="{{ product.featured_image.alt | escape }}">
+                        {% else %}
+                          {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                        {% endif %}
+                        <span>{{ product.title }}</span>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+              <!-- Quick Links -->
+              <div>
+                {%- if block.settings.quick_links != blank -%}
+                  <ul class="mega-menu__quick-links">
+                    {%- for link in block.settings.quick_links.links -%}
+                      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </div>
+
+            </div>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Mega Menu",
+  "tag": "section",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "color",
+      "id": "underline_color",
+      "label": "Hover Underline Color",
+      "default": "#E7237E"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu_item",
+      "name": "Menu Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text",
+          "default": "Menu Item"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "header",
+          "content": "Dropdown Content"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_dropdown",
+          "label": "Show dropdown on hover",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Feature Card 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_1_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "feature_1_heading",
+          "label": "Heading",
+          "default": "Feature Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_1_text",
+          "label": "Text",
+          "default": "Describe the feature or promotion."
+        },
+        {
+          "type": "url",
+          "id": "feature_1_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "header",
+          "content": "Feature Card 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_2_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "feature_2_heading",
+          "label": "Heading",
+          "default": "Feature Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_2_text",
+          "label": "Text",
+          "default": "Describe the feature or promotion."
+        },
+        {
+          "type": "url",
+          "id": "feature_2_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "header",
+          "content": "Product & Quick Links"
+        },
+        {
+          "type": "product_list",
+          "id": "featured_products",
+          "label": "Featured Products",
+          "limit": 5
+        },
+        {
+          "type": "link_list",
+          "id": "quick_links",
+          "label": "Quick Links"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mega Menu",
+      "blocks": [
+        { "type": "menu_item", "settings": { "link_text": "Shop All" }},
+        { "type": "menu_item", "settings": { "link_text": "Face" }},
+        { "type": "menu_item", "settings": { "link_text": "Eyes" }},
+        { "type": "menu_item", "settings": { "link_text": "Lips" }}
+      ]
+    }
+  ]
+}
+{% endschema %}
