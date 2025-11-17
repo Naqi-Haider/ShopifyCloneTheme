@@ -1,0 +1,353 @@
+<style>
+  .mobile-menu-drawer {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    max-width: 420px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 9999;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-menu-drawer.is-open {
+    left: 0;
+  }
+
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .mobile-menu-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .mobile-menu__close {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #000;
+  }
+
+  .mobile-menu__logo {
+    flex: 1;
+    text-align: center;
+  }
+
+  .mobile-menu__logo img {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .mobile-menu__cart {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .mobile-menu__cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .mobile-menu__search {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .mobile-menu__search-input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .mobile-menu__content {
+    padding: 20px;
+  }
+
+  .mobile-menu__section-title {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    color: #666;
+  }
+
+  .mobile-menu__category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+
+  .mobile-menu__category-item {
+    margin-bottom: 16px;
+  }
+
+  .mobile-menu__category-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 0;
+  }
+
+  .mobile-menu__category-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 12px;
+    border-radius: 4px;
+  }
+
+  .mobile-menu__category-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  .mobile-menu__category-arrow {
+    font-size: 18px;
+    color: #999;
+  }
+
+  .mobile-menu__product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+
+  .mobile-menu__product-item {
+    margin-bottom: 12px;
+  }
+
+  .mobile-menu__product-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    gap: 12px;
+  }
+
+  .mobile-menu__product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    background-color: #f5f5f5;
+  }
+
+  .mobile-menu__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu__link-item {
+    margin-bottom: 12px;
+  }
+
+  .mobile-menu__link {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+</style>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+<div class="mobile-menu-drawer" id="mobileMenuDrawer">
+  <!-- Header -->
+  <div class="mobile-menu__header">
+    <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close menu">
+      ×
+    </button>
+    <div class="mobile-menu__logo">
+      {% if section.settings.logo %}
+        <img src="{{ section.settings.logo | image_url: width: 200 }}" alt="{{ shop.name }}" width="150" height="auto">
+      {% else %}
+        <span style="font-weight: bold; font-size: 18px;">{{ shop.name }}</span>
+      {% endif %}
+    </div>
+    <a href="/cart" class="mobile-menu__cart">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+      </svg>
+      <span class="mobile-menu__cart-count">{{ cart.item_count }}</span>
+    </a>
+  </div>
+
+  <!-- Search -->
+  <div class="mobile-menu__search">
+    <form action="/search" method="get">
+      <input 
+        type="search" 
+        name="q" 
+        class="mobile-menu__search-input" 
+        placeholder="Enter Search"
+        autocomplete="off"
+      >
+    </form>
+  </div>
+
+  <!-- Content -->
+  <div class="mobile-menu__content">
+    <!-- Shop by Category -->
+    <h3 class="mobile-menu__section-title">Shop by Category</h3>
+    <ul class="mobile-menu__category-list">
+      {% for link in linklists.main-menu.links %}
+        <li class="mobile-menu__category-item">
+          <a href="{{ link.url }}" class="mobile-menu__category-link">
+            <div class="mobile-menu__category-content">
+              {% if link.object.featured_image %}
+                <img 
+                  src="{{ link.object.featured_image | image_url: width: 80 }}" 
+                  alt="{{ link.title }}"
+                  class="mobile-menu__category-image"
+                  width="40"
+                  height="40"
+                >
+              {% endif %}
+              <span>{{ link.title | upcase }}</span>
+            </div>
+            <span class="mobile-menu__category-arrow">›</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <!-- Featured Products (example with Eyes collection) -->
+    {% assign eyes_collection = collections['eyes'] %}
+    {% if eyes_collection and eyes_collection.products.size > 0 %}
+      <h3 class="mobile-menu__section-title">Featured Products</h3>
+      <ul class="mobile-menu__product-list">
+        {% for product in eyes_collection.products limit: 5 %}
+          <li class="mobile-menu__product-item">
+            <a href="{{ product.url }}" class="mobile-menu__product-link">
+              {% if product.featured_image %}
+                <img 
+                  src="{{ product.featured_image | image_url: width: 100 }}" 
+                  alt="{{ product.title }}"
+                  class="mobile-menu__product-image"
+                  width="50"
+                  height="50"
+                >
+              {% endif %}
+              <span>{{ product.title }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <!-- Additional Links -->
+    <h3 class="mobile-menu__section-title">Learn More</h3>
+    <ul class="mobile-menu__links">
+      <li class="mobile-menu__link-item">
+        <a href="/pages/about" class="mobile-menu__link">Fragrance</a>
+      </li>
+      <li class="mobile-menu__link-item">
+        <a href="/pages/contact" class="mobile-menu__link">Tools</a>
+      </li>
+      <li class="mobile-menu__link-item">
+        <a href="/pages/faq" class="mobile-menu__link">Apparel</a>
+      </li>
+      <li class="mobile-menu__link-item">
+        <a href="/pages/shipping" class="mobile-menu__link">Body</a>
+      </li>
+      <li class="mobile-menu__link-item">
+        <a href="/collections/all" class="mobile-menu__link">Shop All</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.querySelector('.header__icon--menu');
+    const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+    function openMenu() {
+      mobileMenuDrawer.classList.add('is-open');
+      mobileMenuOverlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenuDrawer.classList.remove('is-open');
+      mobileMenuOverlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    if (menuButton) {
+      menuButton.addEventListener('click', openMenu);
+    }
+
+    if (mobileMenuClose) {
+      mobileMenuClose.addEventListener('click', closeMenu);
+    }
+
+    if (mobileMenuOverlay) {
+      mobileMenuOverlay.addEventListener('click', closeMenu);
+    }
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeMenu();
+      }
+    });
+  });
+</script>

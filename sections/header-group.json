@@ -116,6 +116,7 @@
     },
     "divider_rWL7hV": {
       "type": "divider",
+      "disabled": true,
       "name": "t:names.divider_section",
       "settings": {
         "color_scheme": "",
@@ -305,7 +306,24 @@
       ],
       "name": "Mega Menu",
       "settings": {
-        "underline_color": "#e7237e"
+        "underline_color": "#e7237e",
+        "make_sticky": true,
+        "card_title_font_family": "sans_serif_n4",
+        "card_title_font_size": 14,
+        "card_title_font_weight": "700",
+        "card_title_text_transform": "uppercase",
+        "card_title_letter_spacing": 0.5,
+        "card_title_color": "#000000",
+        "card_desc_font_family": "montserrat_n4",
+        "card_desc_font_size": 14,
+        "card_desc_font_weight": "400",
+        "card_desc_color": "#666666",
+        "product_header_font_family": "montserrat_n4",
+        "product_header_font_size": 14,
+        "product_header_font_weight": "700",
+        "product_header_text_transform": "uppercase",
+        "product_header_letter_spacing": 0.5,
+        "product_header_color": "#000000"
       }
     }
   },
