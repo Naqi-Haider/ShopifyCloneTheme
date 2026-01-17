@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "main": {
       "type": "product-information",
@@ -66,11 +67,24 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "hype_counter_hype_badge_aqjnzf": {
+              "type": "shopify://apps/hype-counter/blocks/hype-badge/019bca68-cbe7-77d6-81ba-16c4c9802100",
+              "settings": {
+                "text_color": "#ff0000",
+                "background_color": "transparent",
+                "font_size": 14,
+                "font_weight": "bold",
+                "padding": 8,
+                "margin": 8,
+                "border_radius": 4,
+                "text_alignment": "left",
+                "animate": true
+              }
+            },
             "group_icgrde": {
               "type": "group",
               "name": "Header",
               "settings": {
-                "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "flex-start",
@@ -98,6 +112,9 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -188,6 +205,7 @@
               "settings": {
                 "stacking": true,
                 "show_pickup_availability": false,
+                "gift_card_form": true,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -245,6 +263,7 @@
             }
           },
           "block_order": [
+            "hype_counter_hype_badge_aqjnzf",
             "group_icgrde",
             "divider_VJhene",
             "variant_picker_R3rGDr",
